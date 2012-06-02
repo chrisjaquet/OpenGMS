@@ -1,0 +1,79 @@
+SET(EXEC_NAME tslam)
+
+INCLUDE_DIRECTORIES(${CMAKE_CURRENT_SOURCE_DIR})
+INCLUDE_DIRECTORIES(${CMAKE_CURRENT_SOURCE_DIR}/ui)
+
+# Source Code
+SET(${EXEC_NAME}_HEADER_FILES 
+        Main.h
+    )
+SET(${EXEC_NAME}_SOURCE_FILES 
+        Main.cpp
+    )
+SET(${EXEC_NAME}_QT_WRAP_FILES
+    )
+SET(${EXEC_NAME}_QT_UI_FILES 
+    )
+SET(${EXEC_NAME}_QT_RESOURCE_FILES
+    )
+SET(${EXEC_NAME}_LIBRARY_FILES 
+        # ${PYTHON_LIBRARIES} 
+        # ${GSL_LIBRARIES}
+        # ${GSLMATRIX_LIB}
+        # ${EKFSLAMv2_LIB}
+        # ${PYTHONQT_LIB}
+        # ${PYTHONQT_ALL_LIB}
+        # ${OPENSCENEGRAPH_LIBRARIES}        
+    )
+SET(${EXEC_NAME}_SWIG_INPUT_FILES
+    )
+    
+INCLUDE_DIRECTORIES( ${CMAKE_CURRENT_BINARY_DIR} ) # For generated ui_ files
+
+# Handle the Qt stuff
+IF(QT4_WRAP_UI)
+    QT4_WRAP_UI(${EXEC_NAME}_QT_WRAPPED_UI_FILES ${${EXEC_NAME}_QT_UI_FILES})
+    QT4_WRAP_CPP(${EXEC_NAME}_QT_WRAPPED_CPP_FILES ${${EXEC_NAME}_QT_WRAP_FILES})
+    QT4_ADD_RESOURCES(${EXEC_NAME}_QT_ADDED_RESOURCE_FILES ${${EXEC_NAME}_QT_RESOURCE_FILES})
+ENDIF()
+
+# Handle the Swig stuff 
+# For this project the components being wrapped are only used to generate the wrapper CPP files and
+# the interface PY files, but not to actually build the module itself.
+# LIST(APPEND ${EXEC_NAME}_SWIG_SOURCE_PARAMETERS -fastquery)
+# SET_SOURCE_FILES_PROPERTIES(${${EXEC_NAME}_SWIG_INPUT_FILES} PROPERTIES CPLUSPLUS TRUE)
+# SET_SOURCE_FILES_PROPERTIES(${${EXEC_NAME}_SWIG_INPUT_FILES} PROPERTIES SWIG_FLAGS "${${EXEC_NAME}_SWIG_SOURCE_PARAMETERS}" )
+# SET(SWIG_WRAPPED_SOURCE_FILES "")
+# # Cycle through all the swig files
+# FOREACH(SWIG_FILE IN ITEMS ${${EXEC_NAME}_SWIG_INPUT_FILES})
+    # GET_FILENAME_COMPONENT(SWIG_FILE_NAME ${SWIG_FILE} NAME_WE)
+    
+    # # Call swig, but do not generate the library component as SWIG_ADD_MODULE would do.
+    # SWIG_GENERATE_CODE(${SWIG_FILE_NAME}_MODULE python ${SWIG_FILE_NAME}_OUT_FILES ${SWIG_FILE} )
+    # # ${SWIG_FILE_NAME}_OUT_FILES
+    # # Add the generated file to the list of source codes to be compiled
+    # SET(SWIG_WRAPPED_SOURCE_FILES ${SWIG_WRAPPED_SOURCE_FILES} ${${SWIG_FILE_NAME}_OUT_FILES})
+    # # MESSAGE(STATUS "Swig Source Files (Generated): ${SWIG_WRAPPED_SOURCE_FILES}")
+    
+    # # When installing, copy the generated interface file to the correct location 
+    # INSTALL(FILES ${CMAKE_CURRENT_BINARY_DIR}/${SWIG_FILE}.py
+            # DESTINATION ${SWIG_PYTHON_INSTALL_DIR})
+# ENDFOREACH()
+
+# Executable Creation File
+ADD_EXECUTABLE(${EXEC_NAME}  ${${EXEC_NAME}_SOURCE_FILES} 
+                                    ${${EXEC_NAME}_HEADER_FILES}
+                                    ${${EXEC_NAME}_QT_WRAPPED_CPP_FILES} 
+                                    ${${EXEC_NAME}_QT_WRAPPED_UI_FILES} 
+                                    ${${EXEC_NAME}_QT_ADDED_RESOURCE_FILES}
+                                    ${SWIG_WRAPPED_SOURCE_FILES})
+TARGET_LINK_LIBRARIES(${EXEC_NAME} ${QT_LIBRARIES} ${${EXEC_NAME}_LIBRARY_FILES})
+SET_PROPERTY(TARGET ${EXEC_NAME} PROPERTY DEBUG_POSTFIX ${CMAKE_DEBUG_POSTFIX})
+SET_PROPERTY(TARGET ${EXEC_NAME} PROPERTY RELEASE_POSTFIX ${CMAKE_RELEASE_POSTFIX})
+SET_PROPERTY(TARGET ${EXEC_NAME} PROPERTY RELWITHDEBINFO_POSTFIX ${CMAKE_RELWITHDEBINFO_POSTFIX})
+
+# Installation
+INSTALL(TARGETS ${EXEC_NAME}
+        LIBRARY DESTINATION lib${LIB_ARCH}
+        ARCHIVE DESTINATION lib${LIB_ARCH}
+        RUNTIME DESTINATION bin)

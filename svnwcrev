@@ -1,0 +1,9 @@
+#!/bin/bash
+regex=".*64.*"
+ver=`uname -r`
+
+if [[ $ver =~ $regex ]]; then
+    ./svnwcrev64 "$@"
+else
+    ./svnwcrev32 "$@"
+fi
