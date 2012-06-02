@@ -1,79 +1,87 @@
-SET(EXEC_NAME tslam)
+# Preamble
+CMAKE_MINIMUM_REQUIRED(VERSION 2.8 FATAL_ERROR)
 
-INCLUDE_DIRECTORIES(${CMAKE_CURRENT_SOURCE_DIR})
-INCLUDE_DIRECTORIES(${CMAKE_CURRENT_SOURCE_DIR}/ui)
+# Project Settings
+PROJECT(OpenGMS)
 
-# Source Code
-SET(${EXEC_NAME}_HEADER_FILES 
-        Main.h
-    )
-SET(${EXEC_NAME}_SOURCE_FILES 
-        Main.cpp
-    )
-SET(${EXEC_NAME}_QT_WRAP_FILES
-    )
-SET(${EXEC_NAME}_QT_UI_FILES 
-    )
-SET(${EXEC_NAME}_QT_RESOURCE_FILES
-    )
-SET(${EXEC_NAME}_LIBRARY_FILES 
-        # ${PYTHON_LIBRARIES} 
-        # ${GSL_LIBRARIES}
-        # ${GSLMATRIX_LIB}
-        # ${EKFSLAMv2_LIB}
-        # ${PYTHONQT_LIB}
-        # ${PYTHONQT_ALL_LIB}
-        # ${OPENSCENEGRAPH_LIBRARIES}        
-    )
-SET(${EXEC_NAME}_SWIG_INPUT_FILES
-    )
-    
-INCLUDE_DIRECTORIES( ${CMAKE_CURRENT_BINARY_DIR} ) # For generated ui_ files
+# Version number setting
+SET(OpenGMS_MAJOR_VERSION 0)
+SET(OpenGMS_MINOR_VERSION 1)
+SET(OpenGMS_PATCH_VERSION 0)
+SET(OpenGMS_VERSION ${OpenGMS_MAJOR_VERSION}.${OpenGMS_MINOR_VERSION}.${OpenGMS_PATCH_VERSION})
 
-# Handle the Qt stuff
-IF(QT4_WRAP_UI)
-    QT4_WRAP_UI(${EXEC_NAME}_QT_WRAPPED_UI_FILES ${${EXEC_NAME}_QT_UI_FILES})
-    QT4_WRAP_CPP(${EXEC_NAME}_QT_WRAPPED_CPP_FILES ${${EXEC_NAME}_QT_WRAP_FILES})
-    QT4_ADD_RESOURCES(${EXEC_NAME}_QT_ADDED_RESOURCE_FILES ${${EXEC_NAME}_QT_RESOURCE_FILES})
+# Architecture detection
+IF(CYGWIN)
+    OPTION(OpenGMS_FORCE_CYGWIN "Set this to ON to enable building on Cygwin. This is not guaranteed to work in the slightest," OFF)
+    MARK_AS_ADVANCED(OpenGMS_FORCE_CYGWIN)
+    IF(${OpenGMS_FORCE_CYGWIN)
+        MESSAGE(WARNING "Cygwin is not a supported build environment -- use at own risk.")
+    ELSE()
+        MESSAGE(FATAL_ERROR "Cygwin is not a supported build environment.")
+    ENDIF()
+ELSEIF(APPLE)
+    OPTION(OpenGMS_FORCE_APPLE "Set this to ON to enable building on Apple. This is not guaranteed to work in the slightest," OFF)
+    MARK_AS_ADVANCED(OpenGMS_FORCE_APPLE)
+    IF(${OpenGMS_FORCE_APPLE)
+        MESSAGE(WARNING "Apple is not a supported build environment -- use at own risk.")
+    ELSE()
+        MESSAGE(FATAL_ERROR "Apple is not a supported build environment.")
+    ENDIF()
+ELSEIF(WIN32)
+    # Windows has been found
+    SET(CMAKE_INSTALL_PREFIX ${CMAKE_INSTALL_PREFIX}/win)
+ELSEIF(UNIX)
+    # Linux has been found
+    SET(CMAKE_INSTALL_PREFIX ${CMAKE_INSTALL_PREFIX}/lin)
+ELSE()
+    MESSAGE(FATAL_ERROR "Your build system (${CMAKE_SYSTEM_NAME}) is not recognised.")
 ENDIF()
 
-# Handle the Swig stuff 
-# For this project the components being wrapped are only used to generate the wrapper CPP files and
-# the interface PY files, but not to actually build the module itself.
-# LIST(APPEND ${EXEC_NAME}_SWIG_SOURCE_PARAMETERS -fastquery)
-# SET_SOURCE_FILES_PROPERTIES(${${EXEC_NAME}_SWIG_INPUT_FILES} PROPERTIES CPLUSPLUS TRUE)
-# SET_SOURCE_FILES_PROPERTIES(${${EXEC_NAME}_SWIG_INPUT_FILES} PROPERTIES SWIG_FLAGS "${${EXEC_NAME}_SWIG_SOURCE_PARAMETERS}" )
-# SET(SWIG_WRAPPED_SOURCE_FILES "")
-# # Cycle through all the swig files
-# FOREACH(SWIG_FILE IN ITEMS ${${EXEC_NAME}_SWIG_INPUT_FILES})
-    # GET_FILENAME_COMPONENT(SWIG_FILE_NAME ${SWIG_FILE} NAME_WE)
-    
-    # # Call swig, but do not generate the library component as SWIG_ADD_MODULE would do.
-    # SWIG_GENERATE_CODE(${SWIG_FILE_NAME}_MODULE python ${SWIG_FILE_NAME}_OUT_FILES ${SWIG_FILE} )
-    # # ${SWIG_FILE_NAME}_OUT_FILES
-    # # Add the generated file to the list of source codes to be compiled
-    # SET(SWIG_WRAPPED_SOURCE_FILES ${SWIG_WRAPPED_SOURCE_FILES} ${${SWIG_FILE_NAME}_OUT_FILES})
-    # # MESSAGE(STATUS "Swig Source Files (Generated): ${SWIG_WRAPPED_SOURCE_FILES}")
-    
-    # # When installing, copy the generated interface file to the correct location 
-    # INSTALL(FILES ${CMAKE_CURRENT_BINARY_DIR}/${SWIG_FILE}.py
-            # DESTINATION ${SWIG_PYTHON_INSTALL_DIR})
-# ENDFOREACH()
+# Determine architecture bitness
+IF(CMAKE_SIZEOF_VOID_P EQUAL 4)
+    MESSAGE(STATUS "Building for 32-Bit System")
+    SET(ARCH_BITNESS "32")
+    SET(LIB_ARCH "")
+ELSEIF(CMAKE_SIZEOF_VOID_P EQUAL 8)
+    MESSAGE(STATUS "Building for 64-Bit System")
+    SET(ARCH_BITNESS "64")
+    SET(LIB_ARCH "64")
+ELSE()
+    MESSAGE(FATAL_ERROR "Could not determine bitness (32 or 64) of architecture.")
+ENDIF()
 
-# Executable Creation File
-ADD_EXECUTABLE(${EXEC_NAME}  ${${EXEC_NAME}_SOURCE_FILES} 
-                                    ${${EXEC_NAME}_HEADER_FILES}
-                                    ${${EXEC_NAME}_QT_WRAPPED_CPP_FILES} 
-                                    ${${EXEC_NAME}_QT_WRAPPED_UI_FILES} 
-                                    ${${EXEC_NAME}_QT_ADDED_RESOURCE_FILES}
-                                    ${SWIG_WRAPPED_SOURCE_FILES})
-TARGET_LINK_LIBRARIES(${EXEC_NAME} ${QT_LIBRARIES} ${${EXEC_NAME}_LIBRARY_FILES})
-SET_PROPERTY(TARGET ${EXEC_NAME} PROPERTY DEBUG_POSTFIX ${CMAKE_DEBUG_POSTFIX})
-SET_PROPERTY(TARGET ${EXEC_NAME} PROPERTY RELEASE_POSTFIX ${CMAKE_RELEASE_POSTFIX})
-SET_PROPERTY(TARGET ${EXEC_NAME} PROPERTY RELWITHDEBINFO_POSTFIX ${CMAKE_RELWITHDEBINFO_POSTFIX})
+# Add the custom .cmake file path
+SET(CMAKE_MODULE_PATH ${OpenGMS_SOURCE_DIR}/cmake_modules;${CMAKE_MODULE_PATH})
 
-# Installation
-INSTALL(TARGETS ${EXEC_NAME}
-        LIBRARY DESTINATION lib${LIB_ARCH}
-        ARCHIVE DESTINATION lib${LIB_ARCH}
-        RUNTIME DESTINATION bin)
+# Add some custom directories
+
+# Find Required Libraries
+
+# Include Directories
+
+# Definitions for Debug Mode
+IF(${CMAKE_BUILD_TYPE} MATCHES "Debug")
+    SET(CMAKE_DEBUG_POSTFIX "d")
+    ADD_DEFINITIONS(-DDEBUG)
+ELSE()
+    SET(CMAKE_RELEASE_POSTFIX "")
+    ADD_DEFINITIONS(-DNDEBUG) 
+ENDIF()
+
+# The Code
+SET(OpenGMS_SOURCE_FILES Main.cpp)
+SET(OpenGMS_HEADER_FILES Main.h)
+
+ADD_EXECUTABLE(OpenGMS WIN32 ${OpenGMS_SOURCE_FILES} ${OpenGMS_HEADER_FILES})
+
+# uninstall target
+CONFIGURE_FILE(
+  "${OpenGMS_SOURCE_DIR}/../cmake_modules/cmake_uninstall.cmake.in"
+  "${CMAKE_CURRENT_BINARY_DIR}/cmake_uninstall.cmake"
+  IMMEDIATE @ONLY)
+ADD_CUSTOM_TARGET(uninstall
+  "${CMAKE_COMMAND}" -P "${CMAKE_CURRENT_BINARY_DIR}/cmake_uninstall.cmake")
+
+
+
+
