@@ -8,9 +8,10 @@
  **************************************************************************************************/
 
 #include "Main.h"
+#include <cstdio>
 
-int Main(int argc, char **argv)
+int main(int argc, char **argv)
 {
-
+    printf("OpenGMS says hello to the world.");
     return 0;
 }
