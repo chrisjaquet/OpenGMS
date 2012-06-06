@@ -8,15 +8,18 @@ SET(${EXEC_NAME}_HEADER_FILES
         Main.h
     )
 SET(${EXEC_NAME}_SOURCE_FILES 
+        ui/MainWindow.cpp
         Main.cpp
     )
 SET(${EXEC_NAME}_QT_WRAP_FILES
+        ui/MainWindow.h
     )
-SET(${EXEC_NAME}_QT_UI_FILES 
+SET(${EXEC_NAME}_QT_UI_FILES
+        ui/MainWindow.ui 
     )
 SET(${EXEC_NAME}_QT_RESOURCE_FILES
     )
-SET(${EXEC_NAME}_LIBRARY_FILES 
+SET(${EXEC_NAME}_LIBRARY_FILES
     )
 SET(${EXEC_NAME}_SWIG_INPUT_FILES
     )
@@ -24,16 +27,16 @@ SET(${EXEC_NAME}_SWIG_INPUT_FILES
 INCLUDE_DIRECTORIES( ${CMAKE_CURRENT_BINARY_DIR} ) # For generated ui_ files
 
 ## Handle the Qt stuff
-IF(QT4_WRAP_UI)
+#IF(QT4_WRAP_UI)
     QT4_WRAP_UI(${EXEC_NAME}_QT_WRAPPED_UI_FILES ${${EXEC_NAME}_QT_UI_FILES})
     QT4_WRAP_CPP(${EXEC_NAME}_QT_WRAPPED_CPP_FILES ${${EXEC_NAME}_QT_WRAP_FILES})
     QT4_ADD_RESOURCES(${EXEC_NAME}_QT_ADDED_RESOURCE_FILES ${${EXEC_NAME}_QT_RESOURCE_FILES})
-ELSE()
+#ELSE()
     ## Ensure the following are cleared
-    SET(${EXEC_NAME}_QT_WRAPPED_UI_FILES)
-    SET(${EXEC_NAME}_QT_WRAPPED_CPP_FILES)
-    SET(${EXEC_NAME}_QT_ADDED_RESOURCE_FILES)
-ENDIF()
+#    SET(${EXEC_NAME}_QT_WRAPPED_UI_FILES)
+#    SET(${EXEC_NAME}_QT_WRAPPED_CPP_FILES)
+#    SET(${EXEC_NAME}_QT_ADDED_RESOURCE_FILES)
+#ENDIF()
 
 # Handle the Swig stuff 
 # For this project the components being wrapped are only used to generate the wrapper CPP files and

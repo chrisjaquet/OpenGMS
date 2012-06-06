@@ -127,9 +127,9 @@ OPTION(BUILD_SHARED_LIBRARIES "Set this to ON to build shared libraries, rather 
     # Extra Package-defined Libraries
     # FIND_PACKAGE(PythonLibs 2.7 REQUIRED)
     # FIND_PACKAGE(GSL 1.15 REQUIRED)
-    # FIND_PACKAGE(Qt4 4.7.4 REQUIRED QtGui QtCore QtOpenGL)
+    FIND_PACKAGE(Qt4 4.7.4 REQUIRED QtGui QtCore)
     # SET(QT_USE_QTMAIN TRUE)
-    # INCLUDE(${QT_USE_FILE})
+    INCLUDE(${QT_USE_FILE})
     # FIND_PACKAGE(SWIG 2.0.4 REQUIRED)
     # INCLUDE(UseSWIG_Mine)
     # SET(SWIG_PYTHON_INSTALL_DIR ${CMAKE_CURRENT_SOURCE_DIR}/../swig_py_modules)
