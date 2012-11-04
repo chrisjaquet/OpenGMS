@@ -25,11 +25,14 @@
  */
 int main(int argc, char **argv)
 {
-    printf("[main] OpenGMS says greetings to the world.");
+    printf("[main] Starting...\n");
 
     QApplication a(argc, argv);
     MainWindow w;
     w.show();
 
-    return a.exec();
+    int retval = a.exec();
+    printf("[main] Done (Return Value: %d)\n", retval);
+
+    return retval;
 }

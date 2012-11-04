@@ -4,18 +4,26 @@ INCLUDE_DIRECTORIES(${CMAKE_CURRENT_SOURCE_DIR})
 INCLUDE_DIRECTORIES(${CMAKE_CURRENT_SOURCE_DIR}/ui)
 
 ## Source Code
-SET(${EXEC_NAME}_HEADER_FILES 
+SET(${EXEC_NAME}_HEADER_FILES
+        ui/Settings.h 
         Main.h
     )
 SET(${EXEC_NAME}_SOURCE_FILES 
         ui/MainWindow.cpp
+        ui/DialogAbout.cpp
+        ui/UIManager.cpp
+        ui/DockWidgetConsole.cpp
         Main.cpp
     )
 SET(${EXEC_NAME}_QT_WRAP_FILES
         ui/MainWindow.h
+        ui/DialogAbout.h
+        ui/UIManager.h
+        ui/DockWidgetConsole.h
     )
 SET(${EXEC_NAME}_QT_UI_FILES
         ui/MainWindow.ui 
+        ui/DialogAbout.ui 
     )
 SET(${EXEC_NAME}_QT_RESOURCE_FILES
     )
