@@ -10,7 +10,8 @@
 #define UIMANAGER_H_
 
 // Local Headers ///////////////////////////////////////////////////////////////////////////////////
-#include <qobject.h>
+#include "MainWindow.h"
+#include "../Helpers.h"
 
 // Global Headers //////////////////////////////////////////////////////////////////////////////////
 
@@ -26,15 +27,40 @@ class UIManager : public QObject
     Q_OBJECT
 
     private:
-        QWidget *parent; ///< The parent window that is being managed.
+        QDockWidget *_fileExplorer;
+        MainWindow _mainWindow; ///< The main window that is being managed.
 
     public:
         // Constructors/Destructors
-        UIManager(QWidget *parent = 0);
+        UIManager();
         virtual ~UIManager();
 
         // Getters/Setters
-        Const
+        MainWindow &mainWindow(void);
+
+        // Other Methods
+        void setup(void);
+        void show(void);
 };
 
+// Inline Method Implementations ///////////////////////////////////////////////////////////////////
+
+/**
+ * Getter for _mainWindow. Since the main window being managed can only be set at initialisation,
+ * there is no setter.
+ *
+ * \return The mainWindow widget being managed.
+ */
+inline MainWindow &UIManager::mainWindow(void)
+{
+    return _mainWindow;
+}
+
+/**
+ * Shows the main window.
+ */
+inline void UIManager::show(void)
+{
+    _mainWindow.show();
+}
 #endif /* UIMANAGER_H_ */

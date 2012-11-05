@@ -9,17 +9,26 @@
 
 // Local Headers ///////////////////////////////////////////////////////////////////////////////////
 #include "UIManager.h"
+#include "DockWidgetFileExplorer.h"
 
 // Global Headers //////////////////////////////////////////////////////////////////////////////////
 
 // Class Implementation ////////////////////////////////////////////////////////////////////////////
 
 /**
- * The default constructor
- * @param parent
+ * The default constructor. This constructor will create the main window and set up its default
+ * state.
  */
-UIManager::UIManager(QWidget *parent) : parent=parent
+UIManager::UIManager()
 {
+    // We will now populate the main window and all its menus and the status bar.
+
+    // File Explorer
+    _fileExplorer = new DockWidgetFileExplorer(&_mainWindow);
+    _mainWindow.addDockWidget(Qt::LeftDockWidgetArea, _fileExplorer);
+
+    // Console Dock
+
 }
 
 /**
@@ -27,5 +36,9 @@ UIManager::UIManager(QWidget *parent) : parent=parent
  */
 UIManager::~UIManager()
 {
+    if(_fileExplorer)
+    {
+        delete _fileExplorer;
+    }
 }
 

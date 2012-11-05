@@ -34,7 +34,7 @@
 									<listOptionValue builtIn="false" value="ARCH_BITNESS=32"/>
 									<listOptionValue builtIn="false" value="OS_WINDOWS=1"/>
 								</option>
-								<option id="gnu.cpp.compiler.option.include.paths.122068173" superClass="gnu.cpp.compiler.option.include.paths" valueType="includePath">
+								<option id="gnu.cpp.compiler.option.include.paths.122068173" name="Include paths (-I)" superClass="gnu.cpp.compiler.option.include.paths" valueType="includePath">
 									<listOptionValue builtIn="false" value="/usr/include"/>
 								</option>
 								<inputType id="cdt.managedbuild.tool.gnu.cpp.compiler.input.335764593" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.input"/>
@@ -126,7 +126,7 @@
 					<folderInfo id="cdt.managedbuild.config.gnu.mingw.exe.debug.971127276.1634983904." name="/" resourcePath="">
 						<toolChain id="cdt.managedbuild.toolchain.gnu.base.1074359876" name="Linux GCC" superClass="cdt.managedbuild.toolchain.gnu.base">
 							<targetPlatform archList="all" binaryParser="org.eclipse.cdt.core.ELF" id="cdt.managedbuild.target.gnu.platform.base.1802917991" name="Debug Platform" osList="linux,hpux,aix,qnx" superClass="cdt.managedbuild.target.gnu.platform.base"/>
-							<builder arguments="-C build/${ConfigName}" buildPath="" command="make" enableAutoBuild="true" id="cdt.managedbuild.target.gnu.builder.base.1595936181" keepEnvironmentInBuildfile="false" managedBuildOn="false" name="Gnu Make Builder" superClass="cdt.managedbuild.target.gnu.builder.base">
+							<builder arguments="-C build/${ConfigName}" autoBuildTarget="all" buildPath="" cleanBuildTarget="clean" command="make" enableAutoBuild="true" enableCleanBuild="true" enabledIncrementalBuild="true" id="cdt.managedbuild.target.gnu.builder.base.1595936181" incrementalBuildTarget="all" keepEnvironmentInBuildfile="false" managedBuildOn="false" name="Gnu Make Builder" parallelBuildOn="false" superClass="cdt.managedbuild.target.gnu.builder.base">
 								<outputEntries>
 									<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="outputPath" name=""/>
 								</outputEntries>
@@ -214,7 +214,7 @@
 					<folderInfo id="cdt.managedbuild.config.gnu.mingw.exe.release.1046580944.932745920." name="/" resourcePath="">
 						<toolChain id="cdt.managedbuild.toolchain.gnu.base.810516012" name="Linux GCC" superClass="cdt.managedbuild.toolchain.gnu.base">
 							<targetPlatform archList="all" binaryParser="org.eclipse.cdt.core.ELF" id="cdt.managedbuild.target.gnu.platform.base.1555230249" name="Debug Platform" osList="linux,hpux,aix,qnx" superClass="cdt.managedbuild.target.gnu.platform.base"/>
-							<builder arguments="-C build/${ConfigName}" buildPath="" command="make" id="cdt.managedbuild.target.gnu.builder.base.995760775" keepEnvironmentInBuildfile="false" managedBuildOn="false" name="Gnu Make Builder" superClass="cdt.managedbuild.target.gnu.builder.base">
+							<builder arguments="-C build/${ConfigName}" autoBuildTarget="all" buildPath="" cleanBuildTarget="clean" command="make" enableAutoBuild="true" enableCleanBuild="true" enabledIncrementalBuild="true" id="cdt.managedbuild.target.gnu.builder.base.995760775" incrementalBuildTarget="all" keepEnvironmentInBuildfile="false" managedBuildOn="false" name="Gnu Make Builder" parallelBuildOn="false" superClass="cdt.managedbuild.target.gnu.builder.base">
 								<outputEntries>
 									<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="outputPath" name=""/>
 								</outputEntries>
@@ -356,6 +356,9 @@
 	<storageModule moduleId="org.eclipse.cdt.core.LanguageSettingsProviders"/>
 	<storageModule moduleId="scannerConfiguration">
 		<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+		<scannerConfigBuildInfo instanceId="cdt.managedbuild.config.gnu.mingw.exe.debug.971127276.1634983904;cdt.managedbuild.config.gnu.mingw.exe.debug.971127276.1634983904.;cdt.managedbuild.tool.gnu.cpp.compiler.base.1874209045;cdt.managedbuild.tool.gnu.cpp.compiler.input.1514236068">
+			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId="org.eclipse.cdt.managedbuilder.core.GCCManagedMakePerProjectProfileCPP"/>
+		</scannerConfigBuildInfo>
 		<scannerConfigBuildInfo instanceId="cdt.managedbuild.config.gnu.mingw.exe.debug.971127276.1634983904;cdt.managedbuild.config.gnu.mingw.exe.debug.971127276.1634983904.;cdt.managedbuild.tool.gnu.cpp.compiler.base.1874209045;cdt.managedbuild.tool.gnu.cpp.compiler.input.649188014">
 			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId="org.eclipse.cdt.managedbuilder.core.GCCManagedMakePerProjectProfileCPP"/>
 		</scannerConfigBuildInfo>
@@ -372,6 +375,9 @@
 			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId="org.eclipse.cdt.managedbuilder.core.GCCManagedMakePerProjectProfileC"/>
 		</scannerConfigBuildInfo>
 		<scannerConfigBuildInfo instanceId="cdt.managedbuild.config.gnu.mingw.exe.release.1046580944;cdt.managedbuild.config.gnu.mingw.exe.release.1046580944.;cdt.managedbuild.tool.gnu.c.compiler.mingw.exe.release.2143253634;cdt.managedbuild.tool.gnu.c.compiler.input.1744226458">
+			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId="org.eclipse.cdt.managedbuilder.core.GCCManagedMakePerProjectProfileC"/>
+		</scannerConfigBuildInfo>
+		<scannerConfigBuildInfo instanceId="cdt.managedbuild.config.gnu.mingw.exe.debug.971127276.1634983904;cdt.managedbuild.config.gnu.mingw.exe.debug.971127276.1634983904.;cdt.managedbuild.tool.gnu.c.compiler.base.1189047473;cdt.managedbuild.tool.gnu.c.compiler.input.297496866">
 			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId="org.eclipse.cdt.managedbuilder.core.GCCManagedMakePerProjectProfileC"/>
 		</scannerConfigBuildInfo>
 		<scannerConfigBuildInfo instanceId="cdt.managedbuild.config.gnu.mingw.exe.debug.971127276.1634983904;cdt.managedbuild.config.gnu.mingw.exe.debug.971127276.1634983904.;cdt.managedbuild.tool.gnu.c.compiler.base.1189047473;cdt.managedbuild.tool.gnu.c.compiler.input.651514726">

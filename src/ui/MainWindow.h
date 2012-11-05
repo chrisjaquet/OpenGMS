@@ -1,9 +1,26 @@
-#ifndef MAINWINDOW_H
-#define MAINWINDOW_H
+/**
+ * \file        MainWindow.h
+ * \brief       The MainWindow UI implementation.
+ * \author      Chris Jaquet (chrisjaquet@gmail.com)
+ * \date        03 Nov 2012
+ * \version     0.1
+ * \note        Copyright (c) 2012 Chris Jaquet
+ **************************************************************************************************/
+#ifndef MAINWINDOW_H_
+#define MAINWINDOW_H_
 
-#include <QtGui/QMainWindow>
+// Local Headers ///////////////////////////////////////////////////////////////////////////////////
 #include "ui_MainWindow.h"
 
+// Global Headers //////////////////////////////////////////////////////////////////////////////////
+#include <QtGui/QMainWindow>
+
+// Class Implementation ////////////////////////////////////////////////////////////////////////////
+
+/**
+ * \class MainWindow
+ * \brief The main window class implementation.
+ */
 class MainWindow : public QMainWindow
 {
     Q_OBJECT
@@ -21,4 +38,4 @@ class MainWindow : public QMainWindow
 
 };
 
-#endif // MAINWINDOW_H
+#endif // MAINWINDOW_H_

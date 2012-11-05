@@ -127,7 +127,7 @@ OPTION(BUILD_SHARED_LIBRARIES "Set this to ON to build shared libraries, rather 
     # Extra Package-defined Libraries
     # FIND_PACKAGE(PythonLibs 2.7 REQUIRED)
     # FIND_PACKAGE(GSL 1.15 REQUIRED)
-    FIND_PACKAGE(Qt4 4.7.4 REQUIRED QtGui QtCore)
+    FIND_PACKAGE(Qt4 4.8.3 REQUIRED QtGui QtCore)
     # SET(QT_USE_QTMAIN TRUE)
     INCLUDE(${QT_USE_FILE})
     # FIND_PACKAGE(SWIG 2.0.4 REQUIRED)

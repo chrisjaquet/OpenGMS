@@ -8,12 +8,14 @@
  **************************************************************************************************/
 // Local Headers ///////////////////////////////////////////////////////////////////////////////////
 #include "Main.h"
-#include "ui/MainWindow.h"
+#include "ui/UIManager.h"
+#include "Logger.h"
 
 // Global Headers //////////////////////////////////////////////////////////////////////////////////
 #include <cstdio>
-#include <QtGui>
 #include <QApplication>
+
+// Global Variables ////////////////////////////////////////////////////////////////////////////////
 
 /**
  * Program entry point
@@ -25,14 +27,25 @@
  */
 int main(int argc, char **argv)
 {
-    printf("[main] Starting...\n");
+    // Welcome message and argument list
+    LOGP("Starting...\n");
+    LOGP("  Called as \"%s\"\n", argv[0]);
+    LOGP("  Argument list: \"");
+    for(int i = 1; i < argc; i++)
+    {
+        LOGPB("%s", argv[i]);
+    }
+    LOGPB("\"\n");
 
+    // Create the application and UI Manager
     QApplication a(argc, argv);
-    MainWindow w;
-    w.show();
 
+    UIManager uim;
+    uim.show();
+
+    // Start the event loop
     int retval = a.exec();
-    printf("[main] Done (Return Value: %d)\n", retval);
 
+    LOGP("Exiting with return value: %d\n", retval);
     return retval;
 }

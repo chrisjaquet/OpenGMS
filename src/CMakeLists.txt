@@ -5,7 +5,9 @@ INCLUDE_DIRECTORIES(${CMAKE_CURRENT_SOURCE_DIR}/ui)
 
 ## Source Code
 SET(${EXEC_NAME}_HEADER_FILES
-        ui/Settings.h 
+        ui/Settings.h
+        Helpers.h
+        Logger.h
         Main.h
     )
 SET(${EXEC_NAME}_SOURCE_FILES 
@@ -13,6 +15,7 @@ SET(${EXEC_NAME}_SOURCE_FILES
         ui/DialogAbout.cpp
         ui/UIManager.cpp
         ui/DockWidgetConsole.cpp
+        ui/DockWidgetFileExplorer.cpp
         Main.cpp
     )
 SET(${EXEC_NAME}_QT_WRAP_FILES
@@ -20,10 +23,12 @@ SET(${EXEC_NAME}_QT_WRAP_FILES
         ui/DialogAbout.h
         ui/UIManager.h
         ui/DockWidgetConsole.h
+        ui/DockWidgetFileExplorer.h
     )
 SET(${EXEC_NAME}_QT_UI_FILES
         ui/MainWindow.ui 
         ui/DialogAbout.ui 
+        ui/DockWidgetFileExplorer.ui 
     )
 SET(${EXEC_NAME}_QT_RESOURCE_FILES
     )
