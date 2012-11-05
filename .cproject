@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<?fileVersion 4.0.0?>
-
-<cproject storage_type_id="org.eclipse.cdt.core.XmlProjectDescriptionStorage">
+<?fileVersion 4.0.0?><cproject storage_type_id="org.eclipse.cdt.core.XmlProjectDescriptionStorage">
 	<storageModule moduleId="org.eclipse.cdt.core.settings">
 		<cconfiguration id="cdt.managedbuild.config.gnu.mingw.exe.debug.971127276">
 			<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="cdt.managedbuild.config.gnu.mingw.exe.debug.971127276" moduleId="org.eclipse.cdt.core.settings" name="WindowsDebug">
@@ -36,6 +34,9 @@
 									<listOptionValue builtIn="false" value="ARCH_BITNESS=32"/>
 									<listOptionValue builtIn="false" value="OS_WINDOWS=1"/>
 								</option>
+								<option id="gnu.cpp.compiler.option.include.paths.122068173" superClass="gnu.cpp.compiler.option.include.paths" valueType="includePath">
+									<listOptionValue builtIn="false" value="/usr/include"/>
+								</option>
 								<inputType id="cdt.managedbuild.tool.gnu.cpp.compiler.input.335764593" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.input"/>
 							</tool>
 							<tool errorParsers="org.eclipse.cdt.core.GCCErrorParser" id="cdt.managedbuild.tool.gnu.c.compiler.mingw.exe.debug.2060417144" name="GCC C Compiler" superClass="cdt.managedbuild.tool.gnu.c.compiler.mingw.exe.debug">
@@ -67,13 +68,9 @@
 				<externalSettings/>
 				<extensions>
 					<extension id="org.eclipse.cdt.core.PE" point="org.eclipse.cdt.core.BinaryParser"/>
-					<extension id="org.eclipse.cdt.core.GNU_ELF" point="org.eclipse.cdt.core.BinaryParser"/>
-					<extension id="org.eclipse.cdt.core.ELF" point="org.eclipse.cdt.core.BinaryParser"/>
 					<extension id="org.eclipse.cdt.core.GCCErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
 					<extension id="org.eclipse.cdt.core.GASErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
 					<extension id="org.eclipse.cdt.core.GLDErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
-					<extension id="org.eclipse.cdt.core.GmakeErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
-					<extension id="org.eclipse.cdt.core.CWDLocator" point="org.eclipse.cdt.core.ErrorParser"/>
 				</extensions>
 			</storageModule>
 			<storageModule moduleId="cdtBuildSystem" version="4.0.0">
@@ -294,19 +291,16 @@
 	</storageModule>
 	<storageModule moduleId="refreshScope" versionNumber="2">
 		<configuration configurationName="LinuxRelease">
-			<resource resourceType="PROJECT" workspacePath="/OpenGMS"/>
+			<resource resourceType="PROJECT" workspacePath="/QtOSGTestCMake"/>
 		</configuration>
 		<configuration configurationName="LinuxDebug">
-			<resource resourceType="PROJECT" workspacePath="/OpenGMS"/>
-		</configuration>
-		<configuration configurationName="LinuxRel2">
-			<resource resourceType="PROJECT" workspacePath="/OpenGMS"/>
+			<resource resourceType="PROJECT" workspacePath="/QtOSGTestCMake"/>
 		</configuration>
 		<configuration configurationName="WindowsRelease">
-			<resource resourceType="PROJECT" workspacePath="/OpenGMS"/>
+			<resource resourceType="PROJECT" workspacePath="/QtOSGTestCMake"/>
 		</configuration>
 		<configuration configurationName="WindowsDebug">
-			<resource resourceType="PROJECT" workspacePath="/OpenGMS"/>
+			<resource resourceType="PROJECT" workspacePath="/QtOSGTestCMake"/>
 		</configuration>
 	</storageModule>
 	<storageModule moduleId="org.eclipse.cdt.internal.ui.text.commentOwnerProjectMappings"/>
