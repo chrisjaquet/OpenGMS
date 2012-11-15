@@ -23,7 +23,7 @@ MainWindow::MainWindow(QWidget *parent)
 {
 	ui.setupUi(this);
 
-	connect(ui.actionAboutOpenGMS, SIGNAL(activated()), this, SLOT(showAboutDialog(void)));
+	connect(ui.actionAboutOpenGMS, SIGNAL(triggered()), this, SLOT(showAboutDialog(void)));
 
 }
 

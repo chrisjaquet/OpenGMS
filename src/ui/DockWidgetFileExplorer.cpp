@@ -42,6 +42,7 @@ DockWidgetFileExplorer::DockWidgetFileExplorer(QWidget *parent, QString workingD
     _wDirModel->setRootPath(workingDir);
     _dockwidget.treeViewFiles->setModel(_wDirModel);
     _dockwidget.treeViewFiles->setRootIndex(_wDirModel->index(workingDir));
+    _dockwidget.textEditAddressBar->setPlainText(workingDir);
 
     // Set up the navigation buttons
 
