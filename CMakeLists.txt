@@ -1,5 +1,5 @@
 # Preamble
-CMAKE_MINIMUM_REQUIRED(VERSION 2.8 FATAL_ERROR)
+CMAKE_MINIMUM_REQUIRED(VERSION 2.8.9 FATAL_ERROR)
 
 PROJECT(OpenGMS)
 SET(CMAKE_VERBOSE_MAKEFILE OFF)
@@ -112,6 +112,7 @@ ENDIF()
 
 # Some Extra Options
 OPTION(BUILD_SHARED_LIBRARIES "Set this to ON to build shared libraries, rather than static libraries." ON)
+OPTION(USE_QT_5 "Set this to ON to use Qt5, rather than Qt4" ON)
 
 ## Project Specific Settings Start #################################################################
     # Dependency Root Dir
@@ -127,9 +128,15 @@ OPTION(BUILD_SHARED_LIBRARIES "Set this to ON to build shared libraries, rather 
     # Extra Package-defined Libraries
     # FIND_PACKAGE(PythonLibs 2.7 REQUIRED)
     # FIND_PACKAGE(GSL 1.15 REQUIRED)
-    FIND_PACKAGE(Qt4 4.8.3 REQUIRED QtGui QtCore)
-    # SET(QT_USE_QTMAIN TRUE)
-    INCLUDE(${QT_USE_FILE})
+    IF(${USE_QT_5})
+        FIND_PACKAGE(Qt5Widgets)
+        FIND_PACKAGE(Qt5Core)
+        SET(CMAKE_AUTOMOC ON)
+    ELSE() # Use Qt 4
+        FIND_PACKAGE(Qt4 4.8.3 REQUIRED QtGui QtCore)
+        # SET(QT_USE_QTMAIN TRUE)
+        INCLUDE(${QT_USE_FILE})
+    ENDIF()
     # FIND_PACKAGE(SWIG 2.0.4 REQUIRED)
     # INCLUDE(UseSWIG_Mine)
     # SET(SWIG_PYTHON_INSTALL_DIR ${CMAKE_CURRENT_SOURCE_DIR}/../swig_py_modules)
