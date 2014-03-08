@@ -13,7 +13,8 @@
 #include "ui_MainWindow.h"
 
 // Global Headers //////////////////////////////////////////////////////////////////////////////////
-#include <QtWidgets/QMainWindow>
+// #include <QtWidgets/QMainWindow>// Qt5
+#include <QMainWindow> // Qt4
 
 // Class Implementation ////////////////////////////////////////////////////////////////////////////
 
@@ -31,7 +32,7 @@ class MainWindow : public QMainWindow
     public:
         // Constructors/Destructors
         MainWindow(QWidget *parent = 0);
-        ~MainWindow();
+        virtual ~MainWindow();
 
     public slots:
         void showAboutDialog(void);
