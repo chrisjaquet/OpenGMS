@@ -83,7 +83,7 @@ IF(${BUILD_DONT_MODIFY_INSTALL_PREFIX})
     SET(CMAKE_INSTALL_HEADER_SUBDIR .)
 ELSE()
     SET(CMAKE_INSTALL_PREFIX ${CMAKE_INSTALL_PREFIX}/${OS_NAME}${ARCH_BITNESS}/)
-    MESSAGE(STATUS "Installation prefix is "${CMAKE_INSTALL_PREFIX})
+    MESSAGE(STATUS "Installation prefix is " ${CMAKE_INSTALL_PREFIX})
     SET(CMAKE_INSTALL_LIBRARY_SUBDIR lib${LIB_ARCH})
     SET(CMAKE_INSTALL_ARCHIVE_SUBDIR lib${LIB_ARCH})
     SET(CMAKE_INSTALL_RUNTIME_SUBDIR bin)
@@ -112,7 +112,7 @@ ENDIF()
 
 # Some Extra Options
 OPTION(BUILD_SHARED_LIBRARIES "Set this to ON to build shared libraries, rather than static libraries." ON)
-OPTION(USE_QT_5 "Set this to ON to use Qt5, rather than Qt4" ON)
+OPTION(USE_QT_5 "Set this to ON to use Qt5, rather than Qt4" OFF)
 
 ## Project Specific Settings Start #################################################################
     # Dependency Root Dir
