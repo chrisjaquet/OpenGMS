@@ -16,10 +16,10 @@
 // Class Implementation ////////////////////////////////////////////////////////////////////////////
 
 /**
- * The default constructor. This constructor will create the main window and set up its default
- * state.
+ * The default constructor
+ * @param parent
  */
-UIManager::UIManager()
+UIManager::UIManager(QWidget *parent) : parent(parent)
 {
     // We will now populate the main window and all its menus and the status bar.
 

@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<?fileVersion 4.0.0?><cproject storage_type_id="org.eclipse.cdt.core.XmlProjectDescriptionStorage">
+<?fileVersion 4.0.0?>
+
+<cproject storage_type_id="org.eclipse.cdt.core.XmlProjectDescriptionStorage">
 	<storageModule moduleId="org.eclipse.cdt.core.settings">
 		<cconfiguration id="cdt.managedbuild.config.gnu.mingw.exe.debug.971127276">
 			<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="cdt.managedbuild.config.gnu.mingw.exe.debug.971127276" moduleId="org.eclipse.cdt.core.settings" name="WindowsDebug">
@@ -34,8 +36,27 @@
 									<listOptionValue builtIn="false" value="ARCH_BITNESS=32"/>
 									<listOptionValue builtIn="false" value="OS_WINDOWS=1"/>
 								</option>
-								<option id="gnu.cpp.compiler.option.include.paths.122068173" name="Include paths (-I)" superClass="gnu.cpp.compiler.option.include.paths" valueType="includePath">
-									<listOptionValue builtIn="false" value="/usr/include"/>
+								<option id="gnu.cpp.compiler.option.include.paths.97635156" name="Include paths (-I)" superClass="gnu.cpp.compiler.option.include.paths" valueType="includePath">
+									<listOptionValue builtIn="false" value="C:\Qt\4.8.3\include"/>
+									<listOptionValue builtIn="false" value="C:\Qt\4.8.3\include\phonon"/>
+									<listOptionValue builtIn="false" value="C:\Qt\4.8.3\include\Qt"/>
+									<listOptionValue builtIn="false" value="C:\Qt\4.8.3\include\QtCore"/>
+									<listOptionValue builtIn="false" value="C:\Qt\4.8.3\include\QtDBus"/>
+									<listOptionValue builtIn="false" value="C:\Qt\4.8.3\include\QtDeclarative"/>
+									<listOptionValue builtIn="false" value="C:\Qt\4.8.3\include\QtDesigner"/>
+									<listOptionValue builtIn="false" value="C:\Qt\4.8.3\include\QtGui"/>
+									<listOptionValue builtIn="false" value="C:\Qt\4.8.3\include\QtHelp"/>
+									<listOptionValue builtIn="false" value="C:\Qt\4.8.3\include\QtNetwork"/>
+									<listOptionValue builtIn="false" value="C:\Qt\4.8.3\include\QtOpenGL"/>
+									<listOptionValue builtIn="false" value="C:\Qt\4.8.3\include\QtScript"/>
+									<listOptionValue builtIn="false" value="C:\Qt\4.8.3\include\QtScriptTools"/>
+									<listOptionValue builtIn="false" value="C:\Qt\4.8.3\include\QtSql"/>
+									<listOptionValue builtIn="false" value="C:\Qt\4.8.3\include\QtSvg"/>
+									<listOptionValue builtIn="false" value="C:\Qt\4.8.3\include\QtTest"/>
+									<listOptionValue builtIn="false" value="C:\Qt\4.8.3\include\QtUiTools"/>
+									<listOptionValue builtIn="false" value="C:\Qt\4.8.3\include\QtWebKit"/>
+									<listOptionValue builtIn="false" value="C:\Qt\4.8.3\include\QtXml"/>
+									<listOptionValue builtIn="false" value="C:\Qt\4.8.3\include\QtXmlPatterns"/>
 								</option>
 								<inputType id="cdt.managedbuild.tool.gnu.cpp.compiler.input.335764593" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.input"/>
 							</tool>
@@ -87,7 +108,26 @@
 								<option id="gnu.cpp.compiler.mingw.exe.release.option.optimization.level.1194179250" name="Optimization Level" superClass="gnu.cpp.compiler.mingw.exe.release.option.optimization.level" value="gnu.cpp.compiler.optimization.level.most" valueType="enumerated"/>
 								<option id="gnu.cpp.compiler.mingw.exe.release.option.debugging.level.889488128" name="Debug Level" superClass="gnu.cpp.compiler.mingw.exe.release.option.debugging.level" value="gnu.cpp.compiler.debugging.level.none" valueType="enumerated"/>
 								<option id="gnu.cpp.compiler.option.include.paths.289391047" name="Include paths (-I)" superClass="gnu.cpp.compiler.option.include.paths" valueType="includePath">
-									<listOptionValue builtIn="false" value="/usr/include"/>
+									<listOptionValue builtIn="false" value="C:\Qt\4.8.3\include"/>
+									<listOptionValue builtIn="false" value="C:\Qt\4.8.3\include\phonon"/>
+									<listOptionValue builtIn="false" value="C:\Qt\4.8.3\include\Qt"/>
+									<listOptionValue builtIn="false" value="C:\Qt\4.8.3\include\QtCore"/>
+									<listOptionValue builtIn="false" value="C:\Qt\4.8.3\include\QtDBus"/>
+									<listOptionValue builtIn="false" value="C:\Qt\4.8.3\include\QtDeclarative"/>
+									<listOptionValue builtIn="false" value="C:\Qt\4.8.3\include\QtDesigner"/>
+									<listOptionValue builtIn="false" value="C:\Qt\4.8.3\include\QtGui"/>
+									<listOptionValue builtIn="false" value="C:\Qt\4.8.3\include\QtHelp"/>
+									<listOptionValue builtIn="false" value="C:\Qt\4.8.3\include\QtNetwork"/>
+									<listOptionValue builtIn="false" value="C:\Qt\4.8.3\include\QtOpenGL"/>
+									<listOptionValue builtIn="false" value="C:\Qt\4.8.3\include\QtScript"/>
+									<listOptionValue builtIn="false" value="C:\Qt\4.8.3\include\QtScriptTools"/>
+									<listOptionValue builtIn="false" value="C:\Qt\4.8.3\include\QtSql"/>
+									<listOptionValue builtIn="false" value="C:\Qt\4.8.3\include\QtSvg"/>
+									<listOptionValue builtIn="false" value="C:\Qt\4.8.3\include\QtTest"/>
+									<listOptionValue builtIn="false" value="C:\Qt\4.8.3\include\QtUiTools"/>
+									<listOptionValue builtIn="false" value="C:\Qt\4.8.3\include\QtWebKit"/>
+									<listOptionValue builtIn="false" value="C:\Qt\4.8.3\include\QtXml"/>
+									<listOptionValue builtIn="false" value="C:\Qt\4.8.3\include\QtXmlPatterns"/>
 								</option>
 								<inputType id="cdt.managedbuild.tool.gnu.cpp.compiler.input.2095188012" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.input"/>
 							</tool>
@@ -128,7 +168,7 @@
 					<folderInfo id="cdt.managedbuild.config.gnu.mingw.exe.debug.971127276.1634983904." name="/" resourcePath="">
 						<toolChain id="cdt.managedbuild.toolchain.gnu.base.1074359876" name="Linux GCC" superClass="cdt.managedbuild.toolchain.gnu.base">
 							<targetPlatform archList="all" binaryParser="org.eclipse.cdt.core.ELF" id="cdt.managedbuild.target.gnu.platform.base.1802917991" name="Debug Platform" osList="linux,hpux,aix,qnx" superClass="cdt.managedbuild.target.gnu.platform.base"/>
-							<builder arguments="-C build/${ConfigName}" autoBuildTarget="all" buildPath="" cleanBuildTarget="clean" command="make" enableAutoBuild="true" enableCleanBuild="true" enabledIncrementalBuild="true" id="cdt.managedbuild.target.gnu.builder.base.1595936181" incrementalBuildTarget="all" keepEnvironmentInBuildfile="false" managedBuildOn="false" name="Gnu Make Builder" parallelBuildOn="false" superClass="cdt.managedbuild.target.gnu.builder.base">
+							<builder arguments="-C build/${ConfigName}" buildPath="" command="make" enableAutoBuild="true" id="cdt.managedbuild.target.gnu.builder.base.1595936181" keepEnvironmentInBuildfile="false" managedBuildOn="false" name="Gnu Make Builder" superClass="cdt.managedbuild.target.gnu.builder.base">
 								<outputEntries>
 									<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="outputPath" name=""/>
 								</outputEntries>
@@ -200,7 +240,7 @@
 					<folderInfo id="cdt.managedbuild.config.gnu.mingw.exe.release.1046580944.932745920." name="/" resourcePath="">
 						<toolChain id="cdt.managedbuild.toolchain.gnu.base.810516012" name="Linux GCC" superClass="cdt.managedbuild.toolchain.gnu.base">
 							<targetPlatform archList="all" binaryParser="org.eclipse.cdt.core.ELF" id="cdt.managedbuild.target.gnu.platform.base.1555230249" name="Debug Platform" osList="linux,hpux,aix,qnx" superClass="cdt.managedbuild.target.gnu.platform.base"/>
-							<builder arguments="-C build/${ConfigName}" autoBuildTarget="all" buildPath="" cleanBuildTarget="clean" command="make" enableAutoBuild="true" enableCleanBuild="true" enabledIncrementalBuild="true" id="cdt.managedbuild.target.gnu.builder.base.995760775" incrementalBuildTarget="all" keepEnvironmentInBuildfile="false" managedBuildOn="false" name="Gnu Make Builder" parallelBuildOn="false" superClass="cdt.managedbuild.target.gnu.builder.base">
+							<builder arguments="-C build/${ConfigName}" buildPath="" command="make" id="cdt.managedbuild.target.gnu.builder.base.995760775" keepEnvironmentInBuildfile="false" managedBuildOn="false" name="Gnu Make Builder" superClass="cdt.managedbuild.target.gnu.builder.base">
 								<outputEntries>
 									<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="outputPath" name=""/>
 								</outputEntries>
@@ -261,14 +301,19 @@
 	</storageModule>
 	<storageModule moduleId="refreshScope" versionNumber="2">
 		<configuration configurationName="LinuxRelease">
-			<resource resourceType="PROJECT" workspacePath="/QtOSGTestCMake"/>
+			<resource resourceType="PROJECT" workspacePath="/OpenGMS"/>
 		</configuration>
-		<configuration configurationName="LinuxDebug"/>
+		<configuration configurationName="LinuxDebug">
+			<resource resourceType="PROJECT" workspacePath="/OpenGMS"/>
+		</configuration>
+		<configuration configurationName="LinuxRel2">
+			<resource resourceType="PROJECT" workspacePath="/OpenGMS"/>
+		</configuration>
 		<configuration configurationName="WindowsRelease">
-			<resource resourceType="PROJECT" workspacePath="/QtOSGTestCMake"/>
+			<resource resourceType="PROJECT" workspacePath="/OpenGMS"/>
 		</configuration>
 		<configuration configurationName="WindowsDebug">
-			<resource resourceType="PROJECT" workspacePath="/QtOSGTestCMake"/>
+			<resource resourceType="PROJECT" workspacePath="/OpenGMS"/>
 		</configuration>
 	</storageModule>
 	<storageModule moduleId="org.eclipse.cdt.internal.ui.text.commentOwnerProjectMappings"/>
