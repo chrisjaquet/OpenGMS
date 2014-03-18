@@ -31,7 +31,7 @@
      <number>3</number>
     </property>
     <item>
-     <widget class="QLineEdit" name="textEditAddressBar"/>
+     <widget class="QLineEdit" name="lineEditAddressBar"/>
     </item>
     <item>
      <layout class="QHBoxLayout" name="horizontalLayout">

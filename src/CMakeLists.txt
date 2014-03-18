@@ -91,7 +91,7 @@ ENDIF()
 # Executable Creation File
 ADD_EXECUTABLE(${EXEC_NAME} ${${EXEC_NAME}_SOURCE_FILES} 
                             ${${EXEC_NAME}_HEADER_FILES} 
-#                            ${${EXEC_NAME}_QT_WRAPPED_CPP_FILES} 
+                            ${${EXEC_NAME}_QT_WRAPPED_CPP_FILES} 
                             ${${EXEC_NAME}_QT_WRAPPED_UI_FILES} 
                             ${${EXEC_NAME}_QT_ADDED_RESOURCE_FILES}
                             ${${EXEC_NAME}_SWIG_WRAPPED_SOURCE_FILES})
