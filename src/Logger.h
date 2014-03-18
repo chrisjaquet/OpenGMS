@@ -161,4 +161,97 @@ class CLogContext
 		int m_stackID;
 };
 
+// TODO: The name needs work
+/**
+ * \class CLogContext
+ * \brief Class that automatically updates the current logging context in the constructor and restores it in the
+ * 		  destructor.
+ *
+ * THIS CLASS IS NOT THREAD SAFE!
+ */
+class CLogContext
+{
+	public:
+		// TODO: Expand this to include the class or module name as well.
+		CLogContext(const char *pFunctionName)
+		{
+			m_stackID = CAutoLogger::GetInstance()->EnterContext(pFunctionName);
+		}
+		~CLogContext()
+		{
+			CAutoLogger::GetInstance()->LeaveContext(m_stackID);
+		}
+	private:
+		int m_stackID;
+};
+
+class CAutoLogger
+{
+	friend class CLogContext;
+	public:
+		static CAutoLogger *GetInstance()
+		{
+			if(!sm_instance)
+			{
+				sm_instance = new CAutoLogger();
+			}
+			return sm_instance;
+		}
+
+		CAutoLogger() {}
+		~CAutoLogger() {}
+
+		void LogMessage(std::string& message) const
+		{
+			int indentCount = m_callStack.size() - 1;
+			std::string indentString;
+			while(indentCount)
+			{
+				indentString += " ";
+				indentCount--;
+			}
+
+			char *szLastToken = strtok(message, "\n");
+			const char *szFunctionName = m_callStack.last();
+			while(szLastToken)
+			{
+				printf("%s[%s] %s", indentString.const_data(), szFunctionName, szLastToken);
+			}
+		}
+
+		void PrintCallStack(bool lastCallFirst = true)
+		{
+			int stackDepth = m_callStack.count();
+			for(int i=0; i<stackDepth; i++)
+			{
+				if(lastCallFirst)
+				{
+					int index = stackDepth-i;
+					printf("[%03d] %s", index, m_callStack[index]);
+				}
+				else
+				{
+					printf("[%03d] %s", i+1, m_callStack[i]);
+				}
+			}
+		}
+
+	private:
+		int EnterContext(const char *pFunctionName)
+		{
+			m_callStack.push_back(pFunctionName);
+
+			return m_callStack.size() - 1;
+		}
+
+		void LeaveContext(int stackID)
+		{
+			m_callStack.remove(stackID);
+		}
+
+		static CAutoLogger *sm_instance;
+
+		std::vector<const char*> m_callStack;
+};
+
 #endif /* LOGGER_H_ */
