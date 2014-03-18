@@ -5,14 +5,14 @@
 			<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="cdt.managedbuild.config.gnu.mingw.exe.debug.971127276" moduleId="org.eclipse.cdt.core.settings" name="WindowsDebug">
 				<externalSettings/>
 				<extensions>
-					<extension id="org.eclipse.cdt.core.PE" point="org.eclipse.cdt.core.BinaryParser"/>
-					<extension id="org.eclipse.cdt.core.GNU_ELF" point="org.eclipse.cdt.core.BinaryParser"/>
-					<extension id="org.eclipse.cdt.core.ELF" point="org.eclipse.cdt.core.BinaryParser"/>
 					<extension id="org.eclipse.cdt.core.GCCErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
 					<extension id="org.eclipse.cdt.core.GASErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
 					<extension id="org.eclipse.cdt.core.GLDErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
 					<extension id="org.eclipse.cdt.core.GmakeErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
 					<extension id="org.eclipse.cdt.core.CWDLocator" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.PE" point="org.eclipse.cdt.core.BinaryParser"/>
+					<extension id="org.eclipse.cdt.core.GNU_ELF" point="org.eclipse.cdt.core.BinaryParser"/>
+					<extension id="org.eclipse.cdt.core.ELF" point="org.eclipse.cdt.core.BinaryParser"/>
 				</extensions>
 			</storageModule>
 			<storageModule moduleId="cdtBuildSystem" version="4.0.0">
@@ -67,10 +67,10 @@
 			<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="cdt.managedbuild.config.gnu.mingw.exe.release.1046580944" moduleId="org.eclipse.cdt.core.settings" name="WindowsRelease">
 				<externalSettings/>
 				<extensions>
-					<extension id="org.eclipse.cdt.core.PE" point="org.eclipse.cdt.core.BinaryParser"/>
 					<extension id="org.eclipse.cdt.core.GCCErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
 					<extension id="org.eclipse.cdt.core.GASErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
 					<extension id="org.eclipse.cdt.core.GLDErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.PE" point="org.eclipse.cdt.core.BinaryParser"/>
 				</extensions>
 			</storageModule>
 			<storageModule moduleId="cdtBuildSystem" version="4.0.0">
@@ -111,14 +111,16 @@
 		</cconfiguration>
 		<cconfiguration id="cdt.managedbuild.config.gnu.mingw.exe.debug.971127276.1634983904">
 			<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="cdt.managedbuild.config.gnu.mingw.exe.debug.971127276.1634983904" moduleId="org.eclipse.cdt.core.settings" name="LinuxDebug">
-				<externalSettings/>
+				<externalSettings>
+					<externalSetting/>
+				</externalSettings>
 				<extensions>
-					<extension id="org.eclipse.cdt.core.ELF" point="org.eclipse.cdt.core.BinaryParser"/>
 					<extension id="org.eclipse.cdt.core.GCCErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
 					<extension id="org.eclipse.cdt.core.GASErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
 					<extension id="org.eclipse.cdt.core.GLDErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
 					<extension id="org.eclipse.cdt.core.GmakeErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
 					<extension id="org.eclipse.cdt.core.CWDLocator" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.ELF" point="org.eclipse.cdt.core.BinaryParser"/>
 				</extensions>
 			</storageModule>
 			<storageModule moduleId="cdtBuildSystem" version="4.0.0">
@@ -136,27 +138,10 @@
 								<option id="gnu.cpp.compiler.option.optimization.level.2058982049" name="Optimization Level" superClass="gnu.cpp.compiler.option.optimization.level" value="gnu.cpp.compiler.optimization.level.none" valueType="enumerated"/>
 								<option id="gnu.cpp.compiler.option.debugging.level.1246617442" name="Debug Level" superClass="gnu.cpp.compiler.option.debugging.level" value="gnu.cpp.compiler.debugging.level.max" valueType="enumerated"/>
 								<option id="gnu.cpp.compiler.option.include.paths.1765193672" name="Include paths (-I)" superClass="gnu.cpp.compiler.option.include.paths" valueType="includePath">
-									<listOptionValue builtIn="false" value="/usr/include/qt4/"/>
-									<listOptionValue builtIn="false" value="/usr/include/qt4/phonon"/>
 									<listOptionValue builtIn="false" value="/usr/include/qt4/Qt"/>
 									<listOptionValue builtIn="false" value="/usr/include/qt4/QtCore"/>
-									<listOptionValue builtIn="false" value="/usr/include/qt4/QtDBus"/>
-									<listOptionValue builtIn="false" value="/usr/include/qt4/QtDeclarative"/>
-									<listOptionValue builtIn="false" value="/usr/include/qt4/QtDesigner"/>
 									<listOptionValue builtIn="false" value="/usr/include/qt4/QtGui"/>
-									<listOptionValue builtIn="false" value="/usr/include/qt4/QtHelp"/>
-									<listOptionValue builtIn="false" value="/usr/include/qt4/QtNetwork"/>
 									<listOptionValue builtIn="false" value="/usr/include/qt4/QtOpenGL"/>
-									<listOptionValue builtIn="false" value="/usr/include/qt4/QtScript"/>
-									<listOptionValue builtIn="false" value="/usr/include/qt4/QtScriptTools"/>
-									<listOptionValue builtIn="false" value="/usr/include/qt4/QtSql"/>
-									<listOptionValue builtIn="false" value="/usr/include/qt4/QtSvg"/>
-									<listOptionValue builtIn="false" value="/usr/include/qt4/QtTest"/>
-									<listOptionValue builtIn="false" value="/usr/include/qt4/QtUiTools"/>
-									<listOptionValue builtIn="false" value="/usr/include/qt4/QtWebKit"/>
-									<listOptionValue builtIn="false" value="/usr/include/qt4/QtXml"/>
-									<listOptionValue builtIn="false" value="/usr/include/qt4/QtXmlPatterns"/>
-									<listOptionValue builtIn="false" value="/usr/include"/>
 								</option>
 								<option id="gnu.cpp.compiler.option.preprocessor.def.275501263" name="Defined symbols (-D)" superClass="gnu.cpp.compiler.option.preprocessor.def" valueType="definedSymbols">
 									<listOptionValue builtIn="false" value="OS_LINUX=1"/>
@@ -169,7 +154,10 @@
 								<option defaultValue="gnu.c.optimization.level.none" id="gnu.c.compiler.option.optimization.level.1388341054" name="Optimization Level" superClass="gnu.c.compiler.option.optimization.level" valueType="enumerated"/>
 								<option id="gnu.c.compiler.option.debugging.level.1049300700" name="Debug Level" superClass="gnu.c.compiler.option.debugging.level" value="gnu.c.debugging.level.max" valueType="enumerated"/>
 								<option id="gnu.c.compiler.option.include.paths.1518264317" name="Include paths (-I)" superClass="gnu.c.compiler.option.include.paths" valueType="includePath">
-									<listOptionValue builtIn="false" value="/usr/include/qt4/"/>
+									<listOptionValue builtIn="false" value="/usr/include/qt4/Qt"/>
+									<listOptionValue builtIn="false" value="/usr/include/qt4/QtCore"/>
+									<listOptionValue builtIn="false" value="/usr/include/qt4/QtGui"/>
+									<listOptionValue builtIn="false" value="/usr/include/qt4/QtOpenGL"/>
 								</option>
 								<option id="gnu.c.compiler.option.preprocessor.def.symbols.1978830378" name="Defined symbols (-D)" superClass="gnu.c.compiler.option.preprocessor.def.symbols" valueType="definedSymbols">
 									<listOptionValue builtIn="false" value="OS_LINUX=1"/>
@@ -186,9 +174,7 @@
 								</inputType>
 							</tool>
 							<tool id="cdt.managedbuild.tool.gnu.assembler.base.1123740838" name="GCC Assembler" superClass="cdt.managedbuild.tool.gnu.assembler.base">
-								<option id="gnu.both.asm.option.include.paths.2068241566" name="Include paths (-I)" superClass="gnu.both.asm.option.include.paths" valueType="includePath">
-									<listOptionValue builtIn="false" value="/usr/include/qt4/"/>
-								</option>
+								<option id="gnu.both.asm.option.include.paths.2068241566" name="Include paths (-I)" superClass="gnu.both.asm.option.include.paths"/>
 								<inputType id="cdt.managedbuild.tool.gnu.assembler.input.1570840242" superClass="cdt.managedbuild.tool.gnu.assembler.input"/>
 							</tool>
 						</toolChain>
@@ -201,12 +187,12 @@
 			<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="cdt.managedbuild.config.gnu.mingw.exe.release.1046580944.932745920" moduleId="org.eclipse.cdt.core.settings" name="LinuxRelease">
 				<externalSettings/>
 				<extensions>
-					<extension id="org.eclipse.cdt.core.ELF" point="org.eclipse.cdt.core.BinaryParser"/>
 					<extension id="org.eclipse.cdt.core.GCCErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
 					<extension id="org.eclipse.cdt.core.GASErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
 					<extension id="org.eclipse.cdt.core.GLDErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
 					<extension id="org.eclipse.cdt.core.GmakeErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
 					<extension id="org.eclipse.cdt.core.CWDLocator" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.ELF" point="org.eclipse.cdt.core.BinaryParser"/>
 				</extensions>
 			</storageModule>
 			<storageModule moduleId="cdtBuildSystem" version="4.0.0">
@@ -224,27 +210,10 @@
 								<option id="gnu.cpp.compiler.option.optimization.level.1065434618" name="Optimization Level" superClass="gnu.cpp.compiler.option.optimization.level" value="gnu.cpp.compiler.optimization.level.most" valueType="enumerated"/>
 								<option id="gnu.cpp.compiler.option.debugging.level.797249202" name="Debug Level" superClass="gnu.cpp.compiler.option.debugging.level" value="gnu.cpp.compiler.debugging.level.none" valueType="enumerated"/>
 								<option id="gnu.cpp.compiler.option.include.paths.557567200" name="Include paths (-I)" superClass="gnu.cpp.compiler.option.include.paths" valueType="includePath">
-									<listOptionValue builtIn="false" value="/usr/include/qt4/"/>
-									<listOptionValue builtIn="false" value="/usr/include/qt4/phonon"/>
 									<listOptionValue builtIn="false" value="/usr/include/qt4/Qt"/>
 									<listOptionValue builtIn="false" value="/usr/include/qt4/QtCore"/>
-									<listOptionValue builtIn="false" value="/usr/include/qt4/QtDBus"/>
-									<listOptionValue builtIn="false" value="/usr/include/qt4/QtDeclarative"/>
-									<listOptionValue builtIn="false" value="/usr/include/qt4/QtDesigner"/>
 									<listOptionValue builtIn="false" value="/usr/include/qt4/QtGui"/>
-									<listOptionValue builtIn="false" value="/usr/include/qt4/QtHelp"/>
-									<listOptionValue builtIn="false" value="/usr/include/qt4/QtNetwork"/>
 									<listOptionValue builtIn="false" value="/usr/include/qt4/QtOpenGL"/>
-									<listOptionValue builtIn="false" value="/usr/include/qt4/QtScript"/>
-									<listOptionValue builtIn="false" value="/usr/include/qt4/QtScriptTools"/>
-									<listOptionValue builtIn="false" value="/usr/include/qt4/QtSql"/>
-									<listOptionValue builtIn="false" value="/usr/include/qt4/QtSvg"/>
-									<listOptionValue builtIn="false" value="/usr/include/qt4/QtTest"/>
-									<listOptionValue builtIn="false" value="/usr/include/qt4/QtUiTools"/>
-									<listOptionValue builtIn="false" value="/usr/include/qt4/QtWebKit"/>
-									<listOptionValue builtIn="false" value="/usr/include/qt4/QtXml"/>
-									<listOptionValue builtIn="false" value="/usr/include/qt4/QtXmlPatterns"/>
-									<listOptionValue builtIn="false" value="/usr/include"/>
 								</option>
 								<option id="gnu.cpp.compiler.option.preprocessor.def.358618280" name="Defined symbols (-D)" superClass="gnu.cpp.compiler.option.preprocessor.def" valueType="definedSymbols">
 									<listOptionValue builtIn="false" value="OS_LINUX=1"/>
@@ -257,7 +226,10 @@
 								<option defaultValue="gnu.c.optimization.level.most" id="gnu.c.compiler.option.optimization.level.842153862" name="Optimization Level" superClass="gnu.c.compiler.option.optimization.level" valueType="enumerated"/>
 								<option id="gnu.c.compiler.option.debugging.level.412292625" name="Debug Level" superClass="gnu.c.compiler.option.debugging.level" value="gnu.c.debugging.level.none" valueType="enumerated"/>
 								<option id="gnu.c.compiler.option.include.paths.1757350379" name="Include paths (-I)" superClass="gnu.c.compiler.option.include.paths" valueType="includePath">
-									<listOptionValue builtIn="false" value="/usr/include/qt4/"/>
+									<listOptionValue builtIn="false" value="/usr/include/qt4/Qt"/>
+									<listOptionValue builtIn="false" value="/usr/include/qt4/QtCore"/>
+									<listOptionValue builtIn="false" value="/usr/include/qt4/QtGui"/>
+									<listOptionValue builtIn="false" value="/usr/include/qt4/QtOpenGL"/>
 								</option>
 								<option id="gnu.c.compiler.option.preprocessor.def.symbols.1808613152" name="Defined symbols (-D)" superClass="gnu.c.compiler.option.preprocessor.def.symbols" valueType="definedSymbols">
 									<listOptionValue builtIn="false" value="OS_LINUX=1"/>
@@ -274,9 +246,7 @@
 								</inputType>
 							</tool>
 							<tool id="cdt.managedbuild.tool.gnu.assembler.base.1025093782" name="GCC Assembler" superClass="cdt.managedbuild.tool.gnu.assembler.base">
-								<option id="gnu.both.asm.option.include.paths.2093623535" name="Include paths (-I)" superClass="gnu.both.asm.option.include.paths" valueType="includePath">
-									<listOptionValue builtIn="false" value="/usr/include/qt4/"/>
-								</option>
+								<option id="gnu.both.asm.option.include.paths.2093623535" name="Include paths (-I)" superClass="gnu.both.asm.option.include.paths"/>
 								<inputType id="cdt.managedbuild.tool.gnu.assembler.input.1887524767" superClass="cdt.managedbuild.tool.gnu.assembler.input"/>
 							</tool>
 						</toolChain>
@@ -293,9 +263,7 @@
 		<configuration configurationName="LinuxRelease">
 			<resource resourceType="PROJECT" workspacePath="/QtOSGTestCMake"/>
 		</configuration>
-		<configuration configurationName="LinuxDebug">
-			<resource resourceType="PROJECT" workspacePath="/QtOSGTestCMake"/>
-		</configuration>
+		<configuration configurationName="LinuxDebug"/>
 		<configuration configurationName="WindowsRelease">
 			<resource resourceType="PROJECT" workspacePath="/QtOSGTestCMake"/>
 		</configuration>
@@ -359,13 +327,16 @@
 		<scannerConfigBuildInfo instanceId="cdt.managedbuild.config.gnu.mingw.exe.debug.971127276.1634983904;cdt.managedbuild.config.gnu.mingw.exe.debug.971127276.1634983904.;cdt.managedbuild.tool.gnu.cpp.compiler.base.1874209045;cdt.managedbuild.tool.gnu.cpp.compiler.input.1514236068">
 			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId="org.eclipse.cdt.managedbuilder.core.GCCManagedMakePerProjectProfileCPP"/>
 		</scannerConfigBuildInfo>
-		<scannerConfigBuildInfo instanceId="cdt.managedbuild.config.gnu.mingw.exe.debug.971127276.1634983904;cdt.managedbuild.config.gnu.mingw.exe.debug.971127276.1634983904.;cdt.managedbuild.tool.gnu.cpp.compiler.base.1874209045;cdt.managedbuild.tool.gnu.cpp.compiler.input.649188014">
+		<scannerConfigBuildInfo instanceId="cdt.managedbuild.config.gnu.mingw.exe.release.1046580944.932745920;cdt.managedbuild.config.gnu.mingw.exe.release.1046580944.932745920.;cdt.managedbuild.tool.gnu.cpp.compiler.base.1085524113;cdt.managedbuild.tool.gnu.cpp.compiler.input.841485010">
+			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+		</scannerConfigBuildInfo>
+		<scannerConfigBuildInfo instanceId="cdt.managedbuild.config.gnu.mingw.exe.release.1046580944.932745920;cdt.managedbuild.config.gnu.mingw.exe.release.1046580944.932745920.;cdt.managedbuild.tool.gnu.cpp.compiler.base.1085524113;cdt.managedbuild.tool.gnu.cpp.compiler.input.1271903459">
 			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId="org.eclipse.cdt.managedbuilder.core.GCCManagedMakePerProjectProfileCPP"/>
 		</scannerConfigBuildInfo>
 		<scannerConfigBuildInfo instanceId="cdt.managedbuild.config.gnu.mingw.exe.release.1046580944;cdt.managedbuild.config.gnu.mingw.exe.release.1046580944.;cdt.managedbuild.tool.gnu.cpp.compiler.mingw.exe.release.1524308438;cdt.managedbuild.tool.gnu.cpp.compiler.input.2095188012">
 			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId="org.eclipse.cdt.managedbuilder.core.GCCManagedMakePerProjectProfileCPP"/>
 		</scannerConfigBuildInfo>
-		<scannerConfigBuildInfo instanceId="cdt.managedbuild.config.gnu.mingw.exe.release.1046580944.932745920;cdt.managedbuild.config.gnu.mingw.exe.release.1046580944.932745920.;cdt.managedbuild.tool.gnu.cpp.compiler.base.1085524113;cdt.managedbuild.tool.gnu.cpp.compiler.input.1271903459">
+		<scannerConfigBuildInfo instanceId="cdt.managedbuild.config.gnu.mingw.exe.debug.971127276.1634983904;cdt.managedbuild.config.gnu.mingw.exe.debug.971127276.1634983904.;cdt.managedbuild.tool.gnu.cpp.compiler.base.1874209045;cdt.managedbuild.tool.gnu.cpp.compiler.input.649188014">
 			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId="org.eclipse.cdt.managedbuilder.core.GCCManagedMakePerProjectProfileCPP"/>
 		</scannerConfigBuildInfo>
 		<scannerConfigBuildInfo instanceId="cdt.managedbuild.config.gnu.mingw.exe.debug.971127276;cdt.managedbuild.config.gnu.mingw.exe.debug.971127276.;cdt.managedbuild.tool.gnu.c.compiler.mingw.exe.debug.2060417144;cdt.managedbuild.tool.gnu.c.compiler.input.533968508">
@@ -374,17 +345,20 @@
 		<scannerConfigBuildInfo instanceId="cdt.managedbuild.config.gnu.mingw.exe.release.1046580944.932745920;cdt.managedbuild.config.gnu.mingw.exe.release.1046580944.932745920.;cdt.managedbuild.tool.gnu.c.compiler.base.906619751;cdt.managedbuild.tool.gnu.c.compiler.input.437154711">
 			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId="org.eclipse.cdt.managedbuilder.core.GCCManagedMakePerProjectProfileC"/>
 		</scannerConfigBuildInfo>
-		<scannerConfigBuildInfo instanceId="cdt.managedbuild.config.gnu.mingw.exe.release.1046580944;cdt.managedbuild.config.gnu.mingw.exe.release.1046580944.;cdt.managedbuild.tool.gnu.c.compiler.mingw.exe.release.2143253634;cdt.managedbuild.tool.gnu.c.compiler.input.1744226458">
-			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId="org.eclipse.cdt.managedbuilder.core.GCCManagedMakePerProjectProfileC"/>
-		</scannerConfigBuildInfo>
 		<scannerConfigBuildInfo instanceId="cdt.managedbuild.config.gnu.mingw.exe.debug.971127276.1634983904;cdt.managedbuild.config.gnu.mingw.exe.debug.971127276.1634983904.;cdt.managedbuild.tool.gnu.c.compiler.base.1189047473;cdt.managedbuild.tool.gnu.c.compiler.input.297496866">
 			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId="org.eclipse.cdt.managedbuilder.core.GCCManagedMakePerProjectProfileC"/>
 		</scannerConfigBuildInfo>
-		<scannerConfigBuildInfo instanceId="cdt.managedbuild.config.gnu.mingw.exe.debug.971127276.1634983904;cdt.managedbuild.config.gnu.mingw.exe.debug.971127276.1634983904.;cdt.managedbuild.tool.gnu.c.compiler.base.1189047473;cdt.managedbuild.tool.gnu.c.compiler.input.651514726">
+		<scannerConfigBuildInfo instanceId="cdt.managedbuild.config.gnu.mingw.exe.release.1046580944;cdt.managedbuild.config.gnu.mingw.exe.release.1046580944.;cdt.managedbuild.tool.gnu.c.compiler.mingw.exe.release.2143253634;cdt.managedbuild.tool.gnu.c.compiler.input.1744226458">
 			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId="org.eclipse.cdt.managedbuilder.core.GCCManagedMakePerProjectProfileC"/>
+		</scannerConfigBuildInfo>
+		<scannerConfigBuildInfo instanceId="cdt.managedbuild.config.gnu.mingw.exe.release.1046580944.932745920;cdt.managedbuild.config.gnu.mingw.exe.release.1046580944.932745920.;cdt.managedbuild.tool.gnu.c.compiler.base.906619751;cdt.managedbuild.tool.gnu.c.compiler.input.1198510126">
+			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
 		</scannerConfigBuildInfo>
 		<scannerConfigBuildInfo instanceId="cdt.managedbuild.config.gnu.mingw.exe.debug.971127276;cdt.managedbuild.config.gnu.mingw.exe.debug.971127276.;cdt.managedbuild.tool.gnu.cpp.compiler.mingw.exe.debug.1670073601;cdt.managedbuild.tool.gnu.cpp.compiler.input.335764593">
 			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId="org.eclipse.cdt.managedbuilder.core.GCCManagedMakePerProjectProfileCPP"/>
+		</scannerConfigBuildInfo>
+		<scannerConfigBuildInfo instanceId="cdt.managedbuild.config.gnu.mingw.exe.debug.971127276.1634983904;cdt.managedbuild.config.gnu.mingw.exe.debug.971127276.1634983904.;cdt.managedbuild.tool.gnu.c.compiler.base.1189047473;cdt.managedbuild.tool.gnu.c.compiler.input.651514726">
+			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId="org.eclipse.cdt.managedbuilder.core.GCCManagedMakePerProjectProfileC"/>
 		</scannerConfigBuildInfo>
 	</storageModule>
 </cproject>

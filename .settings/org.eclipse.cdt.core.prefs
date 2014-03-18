@@ -1,7 +1,9 @@
 eclipse.preferences.version=1
 indexer/indexAllFiles=true
+indexer/indexAllHeaderVersions=true
+indexer/indexAllVersionsSpecificHeaders=
 indexer/indexOnOpen=true
-indexer/indexUnusedHeadersWithAlternateLang=false
+indexer/indexUnusedHeadersWithAlternateLang=true
 indexer/indexUnusedHeadersWithDefaultLang=true
 indexer/indexerId=org.eclipse.cdt.core.fastIndexer
 indexer/skipFilesLargerThanMB=8
