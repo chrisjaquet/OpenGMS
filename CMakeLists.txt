@@ -91,7 +91,16 @@ ELSE()
 ENDIF()
 
 # Add the custom .cmake file path
-SET(CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/CMakeModules;${CMAKE_MODULE_PATH})
+SET(CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/CMakeModules ${CMAKE_MODULE_PATH})
+
+# Some additional library paths
+IF(WIN32)
+    SET(CMAKE_PREFIX_PATH d:/Dev/0Libs/Qt/mingw64/5.2.0/qtbase ${CMAKE_PREFIX_PATH})
+ELSE()
+    SET(CMAKE_PREFIX_PATH /media/ssd/Dev/qt/5.2.1/qtbase/ ${CMAKE_PREFIX_PATH})
+ENDIF()
+
+MESSAGE(STATUS "cmake prefix is " ${CMAKE_PREFIX_PATH})
 
 # Definitions for Debug Mode
 IF(${CMAKE_BUILD_TYPE} MATCHES "Debug")
@@ -112,7 +121,7 @@ ENDIF()
 
 # Some Extra Options
 OPTION(BUILD_SHARED_LIBRARIES "Set this to ON to build shared libraries, rather than static libraries." ON)
-OPTION(USE_QT_5 "Set this to ON to use Qt5, rather than Qt4" OFF)
+OPTION(USE_QT_5 "Set this to ON to use Qt5, rather than Qt4" ON)
 
 ## Project Specific Settings Start #################################################################
     # Dependency Root Dir
@@ -131,10 +140,8 @@ OPTION(USE_QT_5 "Set this to ON to use Qt5, rather than Qt4" OFF)
     IF(${USE_QT_5})
         FIND_PACKAGE(Qt5Widgets)
         FIND_PACKAGE(Qt5Core)
-        SET(CMAKE_AUTOMOC ON)
     ELSE() # Use Qt 4
         FIND_PACKAGE(Qt4 4.8.3 REQUIRED QtGui QtCore)
-        # SET(QT_USE_QTMAIN TRUE)
         INCLUDE(${QT_USE_FILE})
     ENDIF()
     # FIND_PACKAGE(SWIG 2.0.4 REQUIRED)

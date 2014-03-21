@@ -7,14 +7,14 @@
 			<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="cdt.managedbuild.config.gnu.mingw.exe.debug.971127276" moduleId="org.eclipse.cdt.core.settings" name="WindowsDebug">
 				<externalSettings/>
 				<extensions>
+					<extension id="org.eclipse.cdt.core.PE" point="org.eclipse.cdt.core.BinaryParser"/>
+					<extension id="org.eclipse.cdt.core.GNU_ELF" point="org.eclipse.cdt.core.BinaryParser"/>
+					<extension id="org.eclipse.cdt.core.ELF" point="org.eclipse.cdt.core.BinaryParser"/>
 					<extension id="org.eclipse.cdt.core.GCCErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
 					<extension id="org.eclipse.cdt.core.GASErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
 					<extension id="org.eclipse.cdt.core.GLDErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
 					<extension id="org.eclipse.cdt.core.GmakeErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
 					<extension id="org.eclipse.cdt.core.CWDLocator" point="org.eclipse.cdt.core.ErrorParser"/>
-					<extension id="org.eclipse.cdt.core.PE" point="org.eclipse.cdt.core.BinaryParser"/>
-					<extension id="org.eclipse.cdt.core.GNU_ELF" point="org.eclipse.cdt.core.BinaryParser"/>
-					<extension id="org.eclipse.cdt.core.ELF" point="org.eclipse.cdt.core.BinaryParser"/>
 				</extensions>
 			</storageModule>
 			<storageModule moduleId="cdtBuildSystem" version="4.0.0">
@@ -88,10 +88,10 @@
 			<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="cdt.managedbuild.config.gnu.mingw.exe.release.1046580944" moduleId="org.eclipse.cdt.core.settings" name="WindowsRelease">
 				<externalSettings/>
 				<extensions>
+					<extension id="org.eclipse.cdt.core.PE" point="org.eclipse.cdt.core.BinaryParser"/>
 					<extension id="org.eclipse.cdt.core.GCCErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
 					<extension id="org.eclipse.cdt.core.GASErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
 					<extension id="org.eclipse.cdt.core.GLDErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
-					<extension id="org.eclipse.cdt.core.PE" point="org.eclipse.cdt.core.BinaryParser"/>
 				</extensions>
 			</storageModule>
 			<storageModule moduleId="cdtBuildSystem" version="4.0.0">
@@ -155,16 +155,16 @@
 					<externalSetting/>
 				</externalSettings>
 				<extensions>
+					<extension id="org.eclipse.cdt.core.ELF" point="org.eclipse.cdt.core.BinaryParser"/>
 					<extension id="org.eclipse.cdt.core.GCCErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
 					<extension id="org.eclipse.cdt.core.GASErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
 					<extension id="org.eclipse.cdt.core.GLDErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
 					<extension id="org.eclipse.cdt.core.GmakeErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
 					<extension id="org.eclipse.cdt.core.CWDLocator" point="org.eclipse.cdt.core.ErrorParser"/>
-					<extension id="org.eclipse.cdt.core.ELF" point="org.eclipse.cdt.core.BinaryParser"/>
 				</extensions>
 			</storageModule>
 			<storageModule moduleId="cdtBuildSystem" version="4.0.0">
-				<configuration artifactName="${ProjName}" buildArtefactType="org.eclipse.cdt.build.core.buildArtefactType.exe" buildProperties="org.eclipse.cdt.build.core.buildType=org.eclipse.cdt.build.core.buildType.debug,org.eclipse.cdt.build.core.buildArtefactType=org.eclipse.cdt.build.core.buildArtefactType.exe" cleanCommand="rm -rf" description="Linux Debug Build" id="cdt.managedbuild.config.gnu.mingw.exe.debug.971127276.1634983904" name="LinuxDebug" parent="cdt.managedbuild.config.gnu.mingw.exe.debug">
+				<configuration artifactName="${ProjName}" buildArtefactType="org.eclipse.cdt.build.core.buildArtefactType.exe" buildProperties="org.eclipse.cdt.build.core.buildArtefactType=org.eclipse.cdt.build.core.buildArtefactType.exe,org.eclipse.cdt.build.core.buildType=org.eclipse.cdt.build.core.buildType.debug" cleanCommand="rm -rf" description="Linux Debug Build" id="cdt.managedbuild.config.gnu.mingw.exe.debug.971127276.1634983904" name="LinuxDebug" parent="cdt.managedbuild.config.gnu.mingw.exe.debug">
 					<folderInfo id="cdt.managedbuild.config.gnu.mingw.exe.debug.971127276.1634983904." name="/" resourcePath="">
 						<toolChain id="cdt.managedbuild.toolchain.gnu.base.1074359876" name="Linux GCC" superClass="cdt.managedbuild.toolchain.gnu.base">
 							<targetPlatform archList="all" binaryParser="org.eclipse.cdt.core.ELF" id="cdt.managedbuild.target.gnu.platform.base.1802917991" name="Debug Platform" osList="linux,hpux,aix,qnx" superClass="cdt.managedbuild.target.gnu.platform.base"/>
@@ -182,6 +182,10 @@
 									<listOptionValue builtIn="false" value="/usr/include/qt4/QtCore"/>
 									<listOptionValue builtIn="false" value="/usr/include/qt4/QtGui"/>
 									<listOptionValue builtIn="false" value="/usr/include/qt4/QtOpenGL"/>
+									<listOptionValue builtIn="false" value="/media/ssd/Dev/qt/5.2.1/qtbase/include"/>
+									<listOptionValue builtIn="false" value="/media/ssd/Dev/qt/5.2.1/qtbase/include/QtGui"/>
+									<listOptionValue builtIn="false" value="/media/ssd/Dev/qt/5.2.1/qtbase/include/QtCore"/>
+									<listOptionValue builtIn="false" value="/media/ssd/Dev/qt/5.2.1/qtbase/include/QtWidgets"/>
 								</option>
 								<option id="gnu.cpp.compiler.option.preprocessor.def.275501263" name="Defined symbols (-D)" superClass="gnu.cpp.compiler.option.preprocessor.def" valueType="definedSymbols">
 									<listOptionValue builtIn="false" value="OS_LINUX=1"/>
@@ -198,6 +202,10 @@
 									<listOptionValue builtIn="false" value="/usr/include/qt4/QtCore"/>
 									<listOptionValue builtIn="false" value="/usr/include/qt4/QtGui"/>
 									<listOptionValue builtIn="false" value="/usr/include/qt4/QtOpenGL"/>
+									<listOptionValue builtIn="false" value="/media/ssd/Dev/qt/5.2.1/qtbase/include"/>
+									<listOptionValue builtIn="false" value="/media/ssd/Dev/qt/5.2.1/qtbase/include/QtGui"/>
+									<listOptionValue builtIn="false" value="/media/ssd/Dev/qt/5.2.1/qtbase/include/QtCore"/>
+									<listOptionValue builtIn="false" value="/media/ssd/Dev/qt/5.2.1/qtbase/include/QtWidgets"/>
 								</option>
 								<option id="gnu.c.compiler.option.preprocessor.def.symbols.1978830378" name="Defined symbols (-D)" superClass="gnu.c.compiler.option.preprocessor.def.symbols" valueType="definedSymbols">
 									<listOptionValue builtIn="false" value="OS_LINUX=1"/>
@@ -227,16 +235,16 @@
 			<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="cdt.managedbuild.config.gnu.mingw.exe.release.1046580944.932745920" moduleId="org.eclipse.cdt.core.settings" name="LinuxRelease">
 				<externalSettings/>
 				<extensions>
+					<extension id="org.eclipse.cdt.core.ELF" point="org.eclipse.cdt.core.BinaryParser"/>
 					<extension id="org.eclipse.cdt.core.GCCErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
 					<extension id="org.eclipse.cdt.core.GASErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
 					<extension id="org.eclipse.cdt.core.GLDErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
 					<extension id="org.eclipse.cdt.core.GmakeErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
 					<extension id="org.eclipse.cdt.core.CWDLocator" point="org.eclipse.cdt.core.ErrorParser"/>
-					<extension id="org.eclipse.cdt.core.ELF" point="org.eclipse.cdt.core.BinaryParser"/>
 				</extensions>
 			</storageModule>
 			<storageModule moduleId="cdtBuildSystem" version="4.0.0">
-				<configuration artifactName="${ProjName}" buildArtefactType="org.eclipse.cdt.build.core.buildArtefactType.exe" buildProperties="org.eclipse.cdt.build.core.buildType=org.eclipse.cdt.build.core.buildType.release,org.eclipse.cdt.build.core.buildArtefactType=org.eclipse.cdt.build.core.buildArtefactType.exe" cleanCommand="rm -rf" description="Linux Release Build" id="cdt.managedbuild.config.gnu.mingw.exe.release.1046580944.932745920" name="LinuxRelease" parent="cdt.managedbuild.config.gnu.mingw.exe.release">
+				<configuration artifactName="${ProjName}" buildArtefactType="org.eclipse.cdt.build.core.buildArtefactType.exe" buildProperties="org.eclipse.cdt.build.core.buildArtefactType=org.eclipse.cdt.build.core.buildArtefactType.exe,org.eclipse.cdt.build.core.buildType=org.eclipse.cdt.build.core.buildType.release" cleanCommand="rm -rf" description="Linux Release Build" id="cdt.managedbuild.config.gnu.mingw.exe.release.1046580944.932745920" name="LinuxRelease" parent="cdt.managedbuild.config.gnu.mingw.exe.release">
 					<folderInfo id="cdt.managedbuild.config.gnu.mingw.exe.release.1046580944.932745920." name="/" resourcePath="">
 						<toolChain id="cdt.managedbuild.toolchain.gnu.base.810516012" name="Linux GCC" superClass="cdt.managedbuild.toolchain.gnu.base">
 							<targetPlatform archList="all" binaryParser="org.eclipse.cdt.core.ELF" id="cdt.managedbuild.target.gnu.platform.base.1555230249" name="Debug Platform" osList="linux,hpux,aix,qnx" superClass="cdt.managedbuild.target.gnu.platform.base"/>
@@ -254,6 +262,10 @@
 									<listOptionValue builtIn="false" value="/usr/include/qt4/QtCore"/>
 									<listOptionValue builtIn="false" value="/usr/include/qt4/QtGui"/>
 									<listOptionValue builtIn="false" value="/usr/include/qt4/QtOpenGL"/>
+									<listOptionValue builtIn="false" value="/media/ssd/Dev/qt/5.2.1/qtbase/include"/>
+									<listOptionValue builtIn="false" value="/media/ssd/Dev/qt/5.2.1/qtbase/include/QtGui"/>
+									<listOptionValue builtIn="false" value="/media/ssd/Dev/qt/5.2.1/qtbase/include/QtCore"/>
+									<listOptionValue builtIn="false" value="/media/ssd/Dev/qt/5.2.1/qtbase/include/QtWidgets"/>
 								</option>
 								<option id="gnu.cpp.compiler.option.preprocessor.def.358618280" name="Defined symbols (-D)" superClass="gnu.cpp.compiler.option.preprocessor.def" valueType="definedSymbols">
 									<listOptionValue builtIn="false" value="OS_LINUX=1"/>
@@ -270,6 +282,10 @@
 									<listOptionValue builtIn="false" value="/usr/include/qt4/QtCore"/>
 									<listOptionValue builtIn="false" value="/usr/include/qt4/QtGui"/>
 									<listOptionValue builtIn="false" value="/usr/include/qt4/QtOpenGL"/>
+									<listOptionValue builtIn="false" value="/media/ssd/Dev/qt/5.2.1/qtbase/include"/>
+									<listOptionValue builtIn="false" value="/media/ssd/Dev/qt/5.2.1/qtbase/include/QtGui"/>
+									<listOptionValue builtIn="false" value="/media/ssd/Dev/qt/5.2.1/qtbase/include/QtCore"/>
+									<listOptionValue builtIn="false" value="/media/ssd/Dev/qt/5.2.1/qtbase/include/QtWidgets"/>
 								</option>
 								<option id="gnu.c.compiler.option.preprocessor.def.symbols.1808613152" name="Defined symbols (-D)" superClass="gnu.c.compiler.option.preprocessor.def.symbols" valueType="definedSymbols">
 									<listOptionValue builtIn="false" value="OS_LINUX=1"/>
