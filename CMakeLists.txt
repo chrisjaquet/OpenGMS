@@ -121,7 +121,7 @@ ENDIF()
 
 # Some Extra Options
 OPTION(BUILD_SHARED_LIBRARIES "Set this to ON to build shared libraries, rather than static libraries." ON)
-OPTION(USE_QT_5 "Set this to ON to use Qt5, rather than Qt4" ON)
+OPTION(USE_QT5 "Set this to ON to use Qt5, rather than Qt4" ON)
 
 ## Project Specific Settings Start #################################################################
     # Dependency Root Dir
@@ -137,7 +137,7 @@ OPTION(USE_QT_5 "Set this to ON to use Qt5, rather than Qt4" ON)
     # Extra Package-defined Libraries
     # FIND_PACKAGE(PythonLibs 2.7 REQUIRED)
     # FIND_PACKAGE(GSL 1.15 REQUIRED)
-    IF(${USE_QT_5})
+    IF(${USE_QT5})
         FIND_PACKAGE(Qt5Widgets)
         FIND_PACKAGE(Qt5Core)
     ELSE() # Use Qt 4

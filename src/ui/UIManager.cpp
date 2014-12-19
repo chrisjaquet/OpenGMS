@@ -19,7 +19,7 @@
  * The default constructor
  * @param parent
  */
-UIManager::UIManager(QWidget *parent) : parent(parent)
+UIManager::UIManager()
 {
     // We will now populate the main window and all its menus and the status bar.
 
